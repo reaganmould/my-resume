@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myresume</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+        <div id="navbar">
+            <img src="assets/img/mypic.png" alt="pic">
+            <div class="top"><p>REAGAN E. GHARTEY-MOULD</p></div>
+            <nav>
+                <ul>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT ME</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    <main>
+        <section>
+            <p>Problem solving in organisations and in the society is one of the 
+            major and quality skill i have developed. Being goal-oriented, meeting demands expected of me and more qualites
+        of a web designer, graphics designer and computer hardware and software technician is what i am made of. I would gladly be able to assist you to perfection
+    in any of these skills mentioned.</p>
+        </section>
+        <section id="about">
+            <h1>ABOUT ME</h1>
+            <p>Reagan Elisha Ghartey-Mould is my name.A young boy 20 years of age.I am a very friendly and jovial
+            but when it comes to work ethics, you will not look anywhere further. I love to meet the demands and expectations of 
+            expected of me.</p>
+            <h2>INTERESTS</h2>
+            <li>I love to code on my laptop whenever i am less busy.</li>
+            <li>I enjoy playing video games as well and i would have got myself series of certicates if EASPORTS were awarding gamers.</li>
+            <li>I find time to also design some flyers to boost my graphics skills not forgetting my 3D designs.</li>
+            <li>As a renowned instrumentalist, I also enjoy playing my instruments in the house of God.</li>
+        </section>
+        <center>
+        <section id="skills" style="width: 100%;">
+            <h1>MY SKILLS</h1>
+            <label for="file">HTML & CSS</label>
+            <progress id="file" value="95" max="100"></progress><br>
+            <label for="file">BOOTSTRAP</label>
+            <progress id="file" value="90" max="100"></progress><br>
+            <label for="file">WORDPRESS</label>
+            <progress id="file" value="96" max="100"></progress><br>
+            <label for="file">PYTHON</label>
+            <progress id="file" value="95" max="100"></progress><br>
+            <label for="file">PHP</label>
+            <progress id="file" value="85" max="100"></progress><br>
+            <label for="file">CREATING LOGOS</label>
+            <progress id="file" value="95" max="100"></progress><br>
+            <label for="file">CREATING 3D MODELS</label>
+            <progress id="file" value="92" max="100"></progress><br>
+            <label for="file">PRODUCT DESIGNING</label>
+            <progress id="file" value="98" max="100"></progress><br>
+            <label for="file">CREATING FLYERS & POSTERS</label>
+            <progress id="file" value="90" max="100"></progress><br>
+        </section>
+        </center>
+        <section id="education">
+           <h1>SCHOOL & EDUCATION</h1>
+           <label for="text">2015-2018</label>
+           <p>ALMA MATTER:GHANA SECONDARY TECHNICAL SCHOOL, TAKORADI</p>
+           <label for="text">2019-DATE</label>
+           <p>WISCONSIN INTERNATIONAL UNIVERSITY COLLEGE</p>
+        </section>
+        <section id="experience">
+            <h1>EXPERIENCE</h1>
+            <h2>ELECTRICITY COMPANY OF GHANA</h2>
+            <p>As an IT Technician, I worked with Electicity Company of Ghana to help in the installation of 
+                CMS softares and repairing of computers
+            </p><br>
+            <h2>SYYNOSAT TECHNOLOGIES</h2>
+            <p>As a technician, rendered service of installing softwares and modifying of laptops and computers</p>
+        </section>
+        <section id="works">
+            <h1>WORKS WILL EB UPLOADED SOON</h1>
+        </section>
+        <section id="contact">
+            <legend>
+            <h4>CONTACT ME</h4>
+                <label for="text"><a href="tel:0540590294" style="color: rgb(0, 184, 70);">+233(0)540590294</a></label><br>
+                <label for="text"><a href="mailto:mouldreagan6@gmail.com" style="color:rgb(0, 184, 70)">mouldreagan6@gmail.com</a></label>
+            </legend>
+          </section>
+        <center>
+        <footer>
+            <a href="mailto:mouldreagan6@gmail.com" class="fa fa-google"></a>
+            <a href="https://gh.linkedin.com/in/reagan-mould-450aab182?" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/channel/UCx_dYDBI87EFy6eUaAG2YjQ" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/p/B8b0wl0hrYH/" class="fa fa-instagram"></a>
+            <a href="https://github.com/reaganmould" class="fa fa-github"></a>
+            <h6>REAGAN E. GHARTEY-MOULD©2020</h6>
+        </footer>
+        </center>
+    </main>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("main section");
+
+let lastId;
+let cur = [];
+ window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+</script>
+</body>
+
+</html>
